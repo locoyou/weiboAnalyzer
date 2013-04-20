@@ -161,3 +161,13 @@ pip-log.txt
 
 # Mac crap
 .DS_Store
+
+#sina weibo
+config.properties
+log4j.properties
+weibo.log
+weibo.log.l
+
+#input and output
+UserInfo.txt
+access_token.txt
