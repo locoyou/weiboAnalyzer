@@ -124,6 +124,7 @@ public class MyWeibo {
 			String userInfo;
 			//读取每个用户信息并抓取指定微博
 			while((userInfo = br.readLine())!= null) {
+				System.out.println(userInfo+" "+userInfo.length());
 				ArrayList<Status> statusList = getStatusList(userInfo);
 				//遍历合格微博，获取评论、转发并解析
 				for(Status status:statusList) {
@@ -158,8 +159,6 @@ public class MyWeibo {
 	 * @return
 	 */
 	public ArrayList<Status> getStatusList(String userInfo) {
-		System.out.println(userInfo.length()+" "+userInfo);
-		System.out.println(userInfo.equalsIgnoreCase("李开复"));
 		ArrayList<Status> statusList = new ArrayList<Status>();
 		try{
 			StatusWapper statusWapper;
@@ -177,6 +176,7 @@ public class MyWeibo {
 					
 					Date createdAt = status.getCreatedAt();
 					System.out.println("created:"+createdAt);
+					System.out.println(status.getCommentsCount() + " " + status.getRepostsCount());
 					if(createdAt.before(startDate)) {
 						System.out.println("early");
 						early = true;
@@ -185,7 +185,7 @@ public class MyWeibo {
 					else if(createdAt.after(endDate)) {
 						continue;
 					}
-					else if((status.getCommentsCount() > commentNum) && (status.getRepostsCount() > repostNum)) {
+					else if((status.getCommentsCount() >= commentNum) && (status.getRepostsCount() >= repostNum)) {
 						statusList.add(status);
 					}
 				}
@@ -195,6 +195,7 @@ public class MyWeibo {
 		catch(Exception e) {
 			e.printStackTrace();
 		}
+		System.out.println(statusList.size());
 		return statusList;
 	}
 }
