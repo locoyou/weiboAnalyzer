@@ -171,3 +171,4 @@ weibo.log.l
 #input and output
 UserInfo.txt
 access_token.txt
+*.rar
