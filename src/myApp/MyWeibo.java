@@ -112,7 +112,7 @@ public class MyWeibo {
 	 */
 	public void delay() throws Exception{
 		System.out.println("delay");
-		Thread.sleep(10000);
+		Thread.sleep(25000);
 	}
 	
 	/**
@@ -132,16 +132,10 @@ public class MyWeibo {
 					ArrayList<Comment> comments = new ArrayList<Comment>();
 					Comments cs = new Comments();
 					cs.client.setToken(access_token);
-					for(int pageNo = 1; ;pageNo++) {
-						ArrayList<Comment> com = (ArrayList<Comment>)cs.getCommentById(status.getId(), new Paging(pageNo, 200), 0).getComments();
-						if(com.isEmpty()) break;
-						comments.addAll(com);
-					}
-					for(int pageNo = 1; ;pageNo++) {
-						ArrayList<Status> rep = (ArrayList<Status>)timeline.getRepostTimeline(status.getId(), new Paging(pageNo,200)).getStatuses();
-						if(rep.isEmpty()) break;
-						repostStatus.addAll(rep);
-					}
+					delay();
+					comments = (ArrayList<Comment>)cs.getCommentById(status.getId(), new Paging(1, 200), 0).getComments();
+					delay();
+					repostStatus = (ArrayList<Status>)timeline.getRepostTimeline(status.getId(), new Paging(1,200)).getStatuses();
 					analyzer.analyse(status, repostStatus, comments);
 				}
 				

@@ -62,6 +62,7 @@ public class Analyzer {
 			String outputFileName = "output/matrix"+count+".csv";
 			PrintWriter bw = new PrintWriter(new OutputStreamWriter(new FileOutputStream(outputFileName)));
 			
+			//TODO 获取博主、转发、评论用户的信息
 			//遍历转发和评论，抽取对话关系放入dialog中
 			String userName = user.getName();
 			HashSet<String> allUser = new HashSet<String>();
@@ -168,6 +169,7 @@ public class Analyzer {
 				bw.println();
 				bw.flush();
 			}
+			bw.close();
 		}
 		catch(Exception e) {
 			e.printStackTrace();
