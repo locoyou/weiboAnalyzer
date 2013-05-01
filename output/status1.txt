@@ -1,12 +1,60 @@
-status|||柳春洋做毕设|||1.跟学弟开玩笑也要适度 2.让学弟做事不要无节制 3.不做自己不喜欢的事没什么值得羞愧的 4.没需求的时候不学，有需求的时候就一定能学好么 5.以后少说话，安静坐着挺好
-comment|||家_渝|||回复@沈世奇Apple:我现在巨穷逼啊！这学期一定请！
-comment|||涂存超|||回复@柳春洋做毕设:。。。
-comment|||沈世奇Apple|||回复@柳春洋做毕设:跟着孙老板刘老板混，回去搞起！
-comment|||沈世奇Apple|||回复@家_渝:回去要联合全实验室欺负你，让你不请客！
-comment|||柳春洋做毕设|||回复@涂存超:没生气，就是有点堵。向超霸王学习
-comment|||涂存超|||春哥别生气啊。。
-comment|||柳春洋做毕设|||回复@沈世奇Apple:学长怎么突然就出差了，求开黑虐菜
-comment|||柳春洋做毕设|||回复@家_渝:没有针对谁，家渝师兄是好人！
-comment|||家_渝|||回复@沈世奇Apple:你快回来让欺负一下！
-comment|||沈世奇Apple|||回复@家_渝:你们居然趁老板不在欺负师弟！
-comment|||家_渝|||。。。。。。。。。。。我错了 好像玩笑开过头了。。。
+<status>
+ <user>柳春洋做毕设</user>
+ <time>Fri Apr 19 21:24:34 CST 2013</time>
+ <text>1.跟学弟开玩笑也要适度 2.让学弟做事不要无节制 3.不做自己不喜欢的事没什么值得羞愧的 4.没需求的时候不学，有需求的时候就一定能学好么 5.以后少说话，安静坐着挺好</text>
+</status>
+<comment>
+ <user>家_渝</user>
+ <time>Sat Apr 20 00:00:31 CST 2013</time>
+ <text>回复@沈世奇Apple:我现在巨穷逼啊！这学期一定请！</text>
+</comment>
+<comment>
+ <user>涂存超</user>
+ <time>Fri Apr 19 23:03:48 CST 2013</time>
+ <text>回复@柳春洋做毕设:。。。</text>
+</comment>
+<comment>
+ <user>沈世奇Apple</user>
+ <time>Fri Apr 19 22:42:08 CST 2013</time>
+ <text>回复@柳春洋做毕设:跟着孙老板刘老板混，回去搞起！</text>
+</comment>
+<comment>
+ <user>沈世奇Apple</user>
+ <time>Fri Apr 19 22:41:21 CST 2013</time>
+ <text>回复@家_渝:回去要联合全实验室欺负你，让你不请客！</text>
+</comment>
+<comment>
+ <user>柳春洋做毕设</user>
+ <time>Fri Apr 19 22:30:08 CST 2013</time>
+ <text>回复@涂存超:没生气，就是有点堵。向超霸王学习</text>
+</comment>
+<comment>
+ <user>涂存超</user>
+ <time>Fri Apr 19 22:17:27 CST 2013</time>
+ <text>春哥别生气啊。。</text>
+</comment>
+<comment>
+ <user>柳春洋做毕设</user>
+ <time>Fri Apr 19 22:13:13 CST 2013</time>
+ <text>回复@沈世奇Apple:学长怎么突然就出差了，求开黑虐菜</text>
+</comment>
+<comment>
+ <user>柳春洋做毕设</user>
+ <time>Fri Apr 19 22:12:24 CST 2013</time>
+ <text>回复@家_渝:没有针对谁，家渝师兄是好人！</text>
+</comment>
+<comment>
+ <user>家_渝</user>
+ <time>Fri Apr 19 22:10:23 CST 2013</time>
+ <text>回复@沈世奇Apple:你快回来让欺负一下！</text>
+</comment>
+<comment>
+ <user>沈世奇Apple</user>
+ <time>Fri Apr 19 21:48:39 CST 2013</time>
+ <text>回复@家_渝:你们居然趁老板不在欺负师弟！</text>
+</comment>
+<comment>
+ <user>家_渝</user>
+ <time>Fri Apr 19 21:31:15 CST 2013</time>
+ <text>。。。。。。。。。。。我错了 好像玩笑开过头了。。。</text>
+</comment>

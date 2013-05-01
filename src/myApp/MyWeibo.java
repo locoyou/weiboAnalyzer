@@ -2,7 +2,10 @@ package myApp;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -122,6 +125,8 @@ public class MyWeibo {
 		try{
 			BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("UserInfo.txt")));
 			String userInfo;
+			PrintWriter bw = new PrintWriter(new OutputStreamWriter(new FileOutputStream("output/AllWeibo.csv")));
+			bw.println("微博,用户,加V,@他人,包含链接");
 			//读取每个用户信息并抓取指定微博
 			while((userInfo = br.readLine())!= null) {
 				System.out.println(userInfo+" "+userInfo.length());
@@ -137,10 +142,22 @@ public class MyWeibo {
 					delay();
 					repostStatus = (ArrayList<Status>)timeline.getRepostTimeline(status.getId(), new Paging(1,200)).getStatuses();
 					analyzer.analyse(status, repostStatus, comments);
+					boolean atOthers,con;
+					if(analyzer.extractUser(status.getText()).size() > 0)
+						atOthers = true;
+					else
+						atOthers = false;
+					if(status.getText().contains("http://t.cn"))
+						con = true;
+					else
+						con = false;
+					bw.println(status.getText().replaceAll(","," ")+","+status.getUser().getName()+","+status.getUser().isVerified()+","+atOthers+","+con);
+					bw.flush();
 				}
 				
 			}
 			br.close();
+			bw.close();
 		}
 		catch(Exception e) {
 			e.printStackTrace();
@@ -179,10 +196,14 @@ public class MyWeibo {
 					else if(createdAt.after(endDate)) {
 						continue;
 					}
-					else if((status.getCommentsCount() >= commentNum) && (status.getRepostsCount() >= repostNum)) {
+					else if((status.getCommentsCount() >= commentNum) && (status.getRepostsCount() >= repostNum) && (status.getCommentsCount() <= 200) && (status.getCommentsCount() <= 200)) {
 						statusList.add(status);
+						if(statusList.size() >= 30)
+							break;
 					}
 				}
+				if(statusList.size() >= 30)
+					break;
 				if(early) break;
 			}
 		}
